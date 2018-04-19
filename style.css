@@ -1,12 +1,17 @@
 #header {
 	background-color: black;
 	color: white;
-	height: 100px;
+	height: 120px;
 	text-align: center;
 }
 #bannerTitle {
 	margin-bottom: -20px;
 	margin-top: 0px;
+}
+#bannerSubtitle {
+	margin-bottom: -20px;
+	margin-top: 15px;
+	font-size: 16px;
 }
 table {
 	margin: auto;
