@@ -8,20 +8,48 @@
 
 <body>
 	<base target="_blank">
-	<a href="https://www.amazon.com/Samsung-Galaxy-SM-G950U-Midnight-Black/dp/B072MQRRTR">
-		<img src="img/phone.png" style="position: relative; top: 30px">
+	<div>
+		<div class="w3-content w3-display-container" style="left: 30px; width: 960px">
+				<a href="https://www.amazon.com/Essential-Phone-Black-Edge-Edge/dp/B074BWGRKH"><img class="mySlides" src="img/phone2.png" style="width:45%"></a>
+				<a href="https://www.sprint.com/en/shop/cell-phones/essential-phone.html?credit=A2&ensembleId=ESS2ALBBBLK&contractName=0-yr-lb-18months&deviceQuantity=1&plan=pln10820000prd"><img class="mySlides" src="img/phone.png" style="width:45%"></a>
+			</a>
+			<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+		</div>
+	
 	</a>
-	<div style="position: absolute; top: 25%; left: 500px">
-		<h1>
-			Samsung Galaxy S8
+		<div style="position: absolute; top: 25%; left: 500px">
+			<h1>
+			Essential PH-1
 		</h1>
 		<p>
 			My current phone is horrible. Most of the time it will make me wait two minutes to open an app, or just to go to my home screen. 
-			I picked this phone due to the fact that it can be leased from Sprint, the screen is beautiful, and it can process very fast. However, I would recommend buying it refurbised from Amazon at full price
+			I picked this phone due to the fact that it can be leased from Sprint, the screen is beautiful, and it can process very fast. However, I would recommend buying it from Amazon at full price.
+			If you plan on buying from Amazon, I would like the color to be "Halo Gray", but only if the price is equal to other options. If you're buying from Sprint, the only option is Black.
 			<br>
 			<br>Want Level: ★★★★★★★★★★
-			<br>Price: $534.95 refurb. full @ Amazon / $28.00 per month @ Sprint, $672 full
+			<br>Price: $399.99 full @ Amazon / $20.84 per month for 18 months @ Sprint, $499.99 full
 			<br>Delivery Time: 1 to 2 days / In-Store Pickup</p>
+		</div>
 	</div>
+	
+	<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
 </body>
 </html>
