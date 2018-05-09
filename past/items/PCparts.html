@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../w3.css">
+	<title>Merrek's Wishlist</title>
+</head>
+
+<body>
+	<base target="_blank">
+	<div>
+		<div class="w3-content w3-display-container" style="left: 30px;">
+			
+			<a href="https://www.amazon.com/dp/B01N1ZOTOG"><img class="mySlides" src="img/motherboard.png" style="width:45%"></a>
+			<a href="https://www.amazon.com/dp/B01LYGFRL6"><img class="mySlides" src="img/PSU.png" style="width:45%"></a>
+			<a href="https://www.amazon.com/Crucial-MX500-250GB-NAND-Internal/dp/B0764WCXCV"><img class="mySlides" src="img/SSD.png" style="width:45%"></a>
+			<a href="https://www.amazon.com/Blue-Desktop-Hard-Disk-Drive/dp/B013QFRS2S"><img class="mySlides" src="img/HDD.png" style="width:45%"></a>
+			<a href="https://www.amazon.com/Monoprice-18-Inch-Cable-Locking-90-Degree/dp/B009GUXU52"><img class="mySlides" src="img/SATAcable.png" style="width:45%"></a>
+			<a href="https://www.amazon.com/Corsair-Mounting-Bracket-drive-CSSD-BRKT1/dp/B0090UG55A"><img class="mySlides" src="img/SSDtray.png" style="width:45%"></a>
+			<a href="https://www.amazon.com/Crucial-MX500-250GB-NAND-Internal/dp/B0764WCXCV"><img class="mySlides" src="img/thermalPaste.png" style="width:45%"></a>
+			<a href="https://www.amazon.com/Crucial-MX500-250GB-NAND-Internal/dp/B0764WCXCV"><img class="mySlides" src="img/RAM.png" style="width:45%"></a>
+		<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+		</div>
+		<div style="position: absolute; top: 25%; left: 500px">
+			<h1>
+				Computer Parts
+			</h1>
+			<p>
+				My computer is getting closer and closer to being obsolete. Due to high market prices, it's hard to buy a whole new build... so in the meantime, I will be using my old CPU and GPU with every other part being brand new.
+			<br>
+			<br>The following were purchased with gift money from Nana:
+			<ul><li>Motherboard: MSI Gaming Intel B250
+				<ul><li>Price: $69.99</li></ul>
+			<li>Power Supply: EVGA SuperNOVA 650 G3, 80 Plus Gold 650W
+				<ul><li>Price: $79.99</li></ul> 
+			<li>Solid State Drive: Crucial MX500 250GB 3D NAND SATA 2.5 Inch Internal SSD - CT250MX500SSD1(Z)
+				<ul><li>Price: $69.99</li></ul>
+			<li>Hard Disk Drive: WD Blue 2TB WD20EZRZ
+				<ul><li>Price: $59.99</li></ul>
+			<li>SATA Cable: 
+				<ul><li>Price: $3.83</li></ul>
+			<li>SSD 3.5" Tray: 
+				<ul><li>Price: $69.99</li></ul>
+			<br>The following was purchased with gift money from Baba:
+			<ul><li>Thermal Paste () 
+				<ul><li>Price: $</li></ul>
+			</ul><br>
+			The following was purchased with gift money from Aunt Heather:
+			<ul><li>Memory:  
+				<ul><li>Price: $</li></ul>
+			</ul><br>
+			<br>Want Level: ★★★★★★★★★★</p>
+		</div>
+	</div>
+	
+	<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+</body>
+</html>
