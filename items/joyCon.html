@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../w3.css">
+	<title>Merrek's Wishlist</title>
+</head>
+
+<body>
+	<base target="_blank">
+	<div>
+		<div class="w3-content w3-display-container" style="left: 30px;">
+			<a href="https://www.amazon.com/Nintendo-Joy-Neon-Red-Blue-switch/dp/B01N6QJ58Y">
+				<img class="mySlides" src="img/joyconREDBLUE.png" style="width:35%"></a>
+			<a href="https://www.amazon.com/Nintendo-Joy-L-R-Yellow-switch/dp/B06ZYM3LBP">
+				<img class="mySlides" src="img/joyconYELLOW.png" style="width:35%"></a>
+			<a href="https://www.amazon.com/Nintendo-Joy-Neon-Pink-Green-switch/dp/B078GZM4H8">
+				<img class="mySlides" src="img/joyconPINKGREEN.png" style="width:35%"></a>
+			
+			<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+		</div>
+	
+	</a>
+		<div style="position: absolute; top: 25%; left: 500px">
+			<h1>
+				Joy-Con
+			</h1>
+			<p>
+				With the new Super Smash Bros. game coming out, I'm going
+				to want to play it with my friends a lot. And I only have
+				a maximum of 3 controllers to work with on my own. With
+				each set given, the want goes down 3 stars.
+			<br>
+			<br>Prefered Order of Colors:
+			<ul>
+				<li>Left Red/Right Blue</li>
+				<li>Left Pink/Right Green</li>
+				<li>Both Yellow</li>
+			</ul>
+			<br>Want Level: ★★★★★★★★★☆
+			<br>Price: $66.77 to 79.99
+			<br>Delivery Time: 1 to 2 days</p>
+		</div>
+	</div>
+	
+	<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+</body>
+</html>
