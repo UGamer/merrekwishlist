@@ -1,0 +1,8 @@
+Find what: &quot;
+Replace with: "
+
+Find what: &lt;
+Replace with: <
+
+Find what: &gt;
+Replace with: >

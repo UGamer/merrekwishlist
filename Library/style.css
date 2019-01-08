@@ -1,0 +1,33 @@
+#header {
+	background-color: black;
+	color: white;
+	height: 120px;
+	text-align: center;
+}
+#bannerTitle {
+	margin-bottom: -20px;
+	margin-top: 0px;
+}
+.bannerSubtitle {
+	margin-bottom: -20px;
+	margin-top: 15px;
+	font-size: 16px;
+}
+table {
+	margin: auto;
+	width: 50%;
+	height: 100px;
+}
+
+th {
+	width: 33%;
+}
+
+a {
+	margin: auto;
+}
+
+body {
+	background-image: url(winterBG2018.jpg);
+	background-size: cover;
+}
