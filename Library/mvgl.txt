@@ -1,0 +1,34 @@
+Steam
+Origin
+uPlay
+GOG
+Twitch.TV Games
+Nintendo Switch
+PlayStation 4
+	Spider Man
+	Persona 5
+	Kingdom Hearts Collection
+	God of War
+Nintendo GameBoy Advance
+	Fire Emblem
+	Pokemon Sapphire
+MUGEN
+Project AM2R
+PokeMMO
+Sonic Robo Blast 2
+Sonic World
+Mobile (Phone)
+
+Emulators
+------------------
+Nintendo 64 (N64)
+Nintendo DS (NDS)
+Nintendo 3DS (3DS)
+Nintendo Entertainment System (NES)
+Nintendo GameBoy Advance (GBA)
+Nintendo GameCube (GC)
+Nintendo Wii (Wii)
+Nintendo Wii U (Wii U)
+Sony PlayStation Portable (PSP)
+Sony PlayStation (PS1)
+Sony PlayStation 2 (PS2)
