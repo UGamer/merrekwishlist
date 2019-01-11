@@ -1,0 +1,49 @@
+1. Update the database.
+	a. Make sure to take note of which new entries will be able to be launched.
+
+2. Once the database is all up to date, export the table as an HTML file in Access.
+	a. Check the first box when it asks.
+	b. Save the file as "import.html"
+
+3. Open "import.html" in Notepad++ then run the cleaning macro.
+	a. If the macro is gone, the steps are:
+		i. Open "Search"
+		ii. Open "Replace"
+		iii. Follow this guide:
+			Find what: &quot;
+			Replace with: "
+
+			Find what: &lt;
+			Replace with: <
+
+			Find what: &gt;
+			Replace with: >
+
+			Find what: <TD BORDERCOLOR=#e7e6e6  ALIGN=CENTER><FONT style=FONT-SIZE:16pt FACE="Calibri" COLOR=#000000>
+			Replace with: <TD>
+
+			Find what: <TD BORDERCOLOR=#e7e6e6 ><FONT style=FONT-SIZE:16pt FACE="Calibri" COLOR=#000000>
+			Replace with: <TD>
+
+			Find what: <TD BORDERCOLOR=#e7e6e6  ALIGN=RIGHT><FONT style=FONT-SIZE:16pt FACE="Calibri" COLOR=#000000>
+			Replace with: <TD>
+
+			Find what: </FONT>
+			Replace with nothing. Erase it.
+
+4. Copy from the first entry in "import.html" all the way down to the last one.
+	a. Ignore the headers!
+	b. From the very first <TR VALIGN=TOP> to the very last </TR>
+
+5. Paste the selection into "table.html".
+	a. Paste from the very first <TR VALIGN=TOP> to the very last </TR>
+	b. Save the file.
+
+6. Update "launcher.html". 
+	a. Copy the entries from the new "table.html" that are launchable.
+	b. Paste the entries into "launch.html" where they belong in their alphabetical order.
+	c. Replace the "Notes/Comments" with a launch button.
+	d. Repeat steps 'a', 'b', and 'c' until all new launchable entries are moved.
+	e. Save the file.
+
+7. Push the update through GitHub!

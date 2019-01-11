@@ -1,6 +1,4 @@
 Steam
-Origin
-	Titanfall 2
 uPlay
 GOG
 Twitch.TV Games
@@ -16,10 +14,11 @@ Nintendo 64 (N64)
 Nintendo DS (NDS)
 Nintendo 3DS (3DS)
 Nintendo Entertainment System (NES)
-Nintendo GameBoy Advance (GBA)
-Nintendo GameCube (GC)
-Nintendo Wii (Wii)
-Nintendo Wii U (Wii U)
+Nintendo GameBoy Advance (GBA) [VisualBoyAdvance]
+Nintendo GameCube (GC) [Dolphin]
+Nintendo Super Entertainment System (SNES) [ZSNES]
+Nintendo Wii (Wii) [Dolphin]
+Nintendo Wii U (Wii U) [CEMU]
 Sony PlayStation Portable (PSP)
 Sony PlayStation (PS1)
 Sony PlayStation 2 (PS2)
