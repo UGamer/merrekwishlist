@@ -16,8 +16,5 @@ Replace with: <TD>
 Find what: <TD BORDERCOLOR=#e7e6e6  ALIGN=RIGHT><FONT style=FONT-SIZE:16pt FACE="Calibri" COLOR=#000000>
 Replace with: <TD>
 
-Find what: <BR>
-Replace with nothing. Erase it.
-
 Find what: </FONT>
 Replace with nothing. Erase it.
