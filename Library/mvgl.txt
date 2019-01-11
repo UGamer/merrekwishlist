@@ -1,5 +1,6 @@
 Steam
 Origin
+	Titanfall 2
 uPlay
 GOG
 Twitch.TV Games
@@ -7,6 +8,7 @@ Nintendo Switch
 PlayStation 4
 Nintendo GameBoy Advance
 Mobile (Phone)
+Nintendo DS
 
 Emulators
 ------------------
