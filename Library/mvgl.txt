@@ -10,15 +10,15 @@ Nintendo DS
 
 Emulators
 ------------------
-Nintendo 64 (N64)
-Nintendo DS (NDS)
-Nintendo 3DS (3DS)
-Nintendo Entertainment System (NES)
+Nintendo 64 (N64) [Project64]
+Nintendo DS (NDS) [RetroArch]/[DeSmuME]
+Nintendo 3DS (3DS) [Citra]
+Nintendo Entertainment System (NES) [Nestopia]/[Mesen]
 Nintendo GameBoy Advance (GBA) [VisualBoyAdvance]
 Nintendo GameCube (GC) [Dolphin]
 Nintendo Super Entertainment System (SNES) [ZSNES]
 Nintendo Wii (Wii) [Dolphin]
 Nintendo Wii U (Wii U) [CEMU]
-Sony PlayStation Portable (PSP)
-Sony PlayStation (PS1)
-Sony PlayStation 2 (PS2)
+Sony PlayStation Portable (PSP) [PPSSPP]
+Sony PlayStation (PS1) [ePSXe]
+Sony PlayStation 2 (PS2) [PCSX2]
