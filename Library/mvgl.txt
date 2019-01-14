@@ -1,12 +1,12 @@
-Steam
+Steam (figured out)
 uPlay
 GOG
 Twitch.TV Games
-Nintendo Switch
-PlayStation 4
-Nintendo GameBoy Advance
-Mobile (Phone)
-Nintendo DS
+Nintendo Switch (can't launch)
+PlayStation 4 (can't launch)
+Nintendo GameBoy Advance (can't launch)
+Mobile (Phone) (can't launch)
+Nintendo DS (can't launch)
 
 Emulators
 ------------------
