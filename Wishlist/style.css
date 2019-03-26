@@ -7,11 +7,17 @@
 #bannerTitle {
 	margin-bottom: -20px;
 	margin-top: 0px;
+	font-family: "Century Gothic";
+	font-style: italic;
+	font-weight: 500;
+	font-variant: small-caps;
 }
 .bannerSubtitle {
 	margin-bottom: -20px;
 	margin-top: 15px;
 	font-size: 16px;
+	font-family: "Century Gothic";
+	font-variant: normal;
 }
 table {
 	margin: auto;
@@ -21,6 +27,8 @@ table {
 
 th {
 	width: 33%;
+	font-family: "Century Gothic";
+	font-variant: normal;
 }
 
 a {
@@ -28,6 +36,6 @@ a {
 }
 
 body {
-	background-image: url(winterBG2018.jpg);
+	background-image: url(birthdayBG2019.jpg);
 	background-size: cover;
 }

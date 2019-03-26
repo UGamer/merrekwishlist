@@ -31,16 +31,3 @@ body {
 	background-image: url(winterBG2018.jpg);
 	background-size: cover;
 }
-
-img {
-	width: 430px;
-}
-	
-p {
-	margin-right: 20px;
-	color: white;
-}
-
-h1 {
-	color: white;
-}
