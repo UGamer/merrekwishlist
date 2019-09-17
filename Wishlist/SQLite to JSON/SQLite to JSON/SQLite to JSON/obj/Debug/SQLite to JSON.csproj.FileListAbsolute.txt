@@ -1,0 +1,15 @@
+E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\bin\Debug\SQLite to JSON.exe.config
+E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\bin\Debug\SQLite to JSON.exe
+E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\bin\Debug\SQLite to JSON.pdb
+E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite to JSON.csprojAssemblyReference.cache
+E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite_to_JSON.Home.resources
+E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite_to_JSON.Properties.Resources.resources
+E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite to JSON.csproj.GenerateResource.cache
+E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite to JSON.csproj.CoreCompileInputs.cache
+E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite to JSON.exe
+E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite to JSON.pdb
+E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\bin\Debug\System.Data.SQLite.dll
+E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\bin\Debug\System.Data.SQLite.xml
+E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite_to_JSON.DialogBox.resources
+E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite to JSON.csproj.CopyComplete
+E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite_to_JSON.JSONResult.resources

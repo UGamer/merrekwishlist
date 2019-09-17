@@ -1,8 +1,1 @@
-{
-	"title": "Nintendo Switch Lite (Sword & Shield Edition)",
-	"want": 9,
-	"price": 199.99,
-	"deliveryTime": 2,
-	"description": "A smaller, more handheld focused Nintendo Switch. I only want this version of it.",
-	"url": "https://www.nintendo.com/switch/buy-now/#nintendo-switch-lite"
-}
+data = '[{"imageTitle":"switchLite","title":"Nintendo Switch Lite (Pokemon Sword and Shield Edition)","want":"9","price":"199.99","deliveryTime":"60","description":"A smaller, more handheld focused Nintendo Switch. I only want this version of it.","url":"https://www.nintendo.com/switch/buy-now/#nintendo-switch-lite"},{"imageTitle":"monitor","title":"Monitor","want":"9","price":"186.98","deliveryTime":"2","description":"Faster and smoother than my current monitor.","url":"https://www.amazon.com/Acer-GN246HL-Bbid-24-Inch-Display/dp/B00KO4518I"}]';
