@@ -53,7 +53,17 @@ namespace SQLite_to_JSON
             }
             else if (type == "AddItems")
             {
+                AddItem addItem = new AddItem(DropDownBox.Text, "Add");
+                addItem.Show();
 
+                this.Close();
+            }
+            else if (type == "ManageItems")
+            {
+                ManageItems manageItems = new ManageItems(DropDownBox.Text);
+                manageItems.Show();
+
+                this.Close();
             }
 
         }

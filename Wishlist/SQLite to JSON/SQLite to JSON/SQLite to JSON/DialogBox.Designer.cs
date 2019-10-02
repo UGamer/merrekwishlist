@@ -44,6 +44,7 @@
             // 
             // DropDownBox
             // 
+            this.DropDownBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DropDownBox.FormattingEnabled = true;
             this.DropDownBox.Location = new System.Drawing.Point(13, 30);
             this.DropDownBox.Name = "DropDownBox";

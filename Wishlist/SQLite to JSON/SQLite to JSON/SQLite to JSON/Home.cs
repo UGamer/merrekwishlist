@@ -43,7 +43,14 @@ namespace SQLite_to_JSON
 
         private void AddItemsButton_Click(object sender, EventArgs e)
         {
+            DialogBox dialogBox = new DialogBox(tableTable, "AddItems");
+            dialogBox.Show();
+        }
 
+        private void ManageItems_Click(object sender, EventArgs e)
+        {
+            DialogBox dialogBox = new DialogBox(tableTable, "ManageItems");
+            dialogBox.Show();
         }
     }
 }

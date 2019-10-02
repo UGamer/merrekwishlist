@@ -73,6 +73,12 @@
     <Compile Include="JSONResult.Designer.cs">
       <DependentUpon>JSONResult.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageItems.Designer.cs">
+      <DependentUpon>ManageItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddItem.resx">
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="JSONResult.resx">
       <DependentUpon>JSONResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageItems.resx">
+      <DependentUpon>ManageItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

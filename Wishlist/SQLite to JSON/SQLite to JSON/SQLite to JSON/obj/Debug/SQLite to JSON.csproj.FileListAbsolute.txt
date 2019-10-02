@@ -13,3 +13,5 @@ E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JS
 E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite_to_JSON.DialogBox.resources
 E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite to JSON.csproj.CopyComplete
 E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite_to_JSON.JSONResult.resources
+E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite_to_JSON.AddItem.resources
+E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite_to_JSON.ManageItems.resources

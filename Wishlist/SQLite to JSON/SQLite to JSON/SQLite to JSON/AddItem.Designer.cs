@@ -43,6 +43,7 @@
             this.URLLabel = new System.Windows.Forms.Label();
             this.URLBox = new System.Windows.Forms.TextBox();
             this.SubmitButton = new System.Windows.Forms.Button();
+            this.DollarSignLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ImageBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WantBar)).BeginInit();
             this.SuspendLayout();
@@ -132,9 +133,9 @@
             // PriceBox
             // 
             this.PriceBox.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PriceBox.Location = new System.Drawing.Point(252, 173);
+            this.PriceBox.Location = new System.Drawing.Point(283, 173);
             this.PriceBox.Name = "PriceBox";
-            this.PriceBox.Size = new System.Drawing.Size(171, 50);
+            this.PriceBox.Size = new System.Drawing.Size(140, 50);
             this.PriceBox.TabIndex = 8;
             // 
             // DeliveryTimeLabel
@@ -183,11 +184,22 @@
             this.SubmitButton.UseVisualStyleBackColor = true;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
+            // DollarSignLabel
+            // 
+            this.DollarSignLabel.AutoSize = true;
+            this.DollarSignLabel.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DollarSignLabel.Location = new System.Drawing.Point(246, 180);
+            this.DollarSignLabel.Name = "DollarSignLabel";
+            this.DollarSignLabel.Size = new System.Drawing.Size(31, 36);
+            this.DollarSignLabel.TabIndex = 15;
+            this.DollarSignLabel.Text = "$";
+            // 
             // AddItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 447);
+            this.Controls.Add(this.DollarSignLabel);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.URLLabel);
             this.Controls.Add(this.URLBox);
@@ -229,5 +241,6 @@
         private System.Windows.Forms.Label URLLabel;
         private System.Windows.Forms.TextBox URLBox;
         private System.Windows.Forms.Button SubmitButton;
+        private System.Windows.Forms.Label DollarSignLabel;
     }
 }

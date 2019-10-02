@@ -74,6 +74,7 @@
             this.ManageItems.Text = "Manage Items";
             this.ManageItems.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ManageItems.UseVisualStyleBackColor = true;
+            this.ManageItems.Click += new System.EventHandler(this.ManageItems_Click);
             // 
             // AddItemsButton
             // 
