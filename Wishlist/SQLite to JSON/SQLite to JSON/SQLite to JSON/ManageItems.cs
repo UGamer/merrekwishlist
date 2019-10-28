@@ -15,22 +15,35 @@ namespace SQLite_to_JSON
     {
         int rowIndex;
         string tableString;
+
+        string connectionString;
+        SQLiteConnection con;
+
         public ManageItems(string tableString)
         {
             this.tableString = tableString;
 
-            string connectionString = "Data Source=items.db;Version=3;";
-            SQLiteConnection con = new SQLiteConnection(connectionString);
+            connectionString = "Data Source=items.db;Version=3;";
+            con = new SQLiteConnection(connectionString);
+            
+            InitializeComponent();
+
+            FillDGV();
+        }
+
+        private void FillDGV()
+        {
+            DGV.DataSource = null;
 
             SQLiteCommand selectCmd = new SQLiteCommand("SELECT * FROM " + tableString, con);
-            
+
             con.Open();
 
             SQLiteDataAdapter da = new SQLiteDataAdapter(selectCmd);
             DataTable table = new DataTable();
             da.Fill(table);
 
-            InitializeComponent();
+            con.Close();
 
             DGV.DataSource = table;
         }
@@ -61,6 +74,21 @@ namespace SQLite_to_JSON
             editItem.Show();
 
             this.Close();
+        }
+
+        private void DeleteEntryButton_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to delete item \"" + DGV.Rows[rowIndex].Cells["Title"].Value.ToString() + "\"", "Are you sure?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                int id = Convert.ToInt32(DGV.Rows[rowIndex].Cells["Id"].Value.ToString());
+                SQLiteCommand deleteCmd = new SQLiteCommand("DELETE FROM " + tableString + " WHERE Id = " + id, con);
+
+                con.Open();
+                deleteCmd.ExecuteNonQuery();
+                con.Close();
+
+                FillDGV();
+            }
         }
     }
 }

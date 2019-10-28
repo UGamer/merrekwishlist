@@ -15,3 +15,19 @@ E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JS
 E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite_to_JSON.JSONResult.resources
 E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite_to_JSON.AddItem.resources
 E:\Projects\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite_to_JSON.ManageItems.resources
+C:\Users\deboltm\Documents\GitHub\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\bin\Debug\SQLite to JSON.exe.config
+C:\Users\deboltm\Documents\GitHub\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\bin\Debug\SQLite to JSON.exe
+C:\Users\deboltm\Documents\GitHub\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\bin\Debug\SQLite to JSON.pdb
+C:\Users\deboltm\Documents\GitHub\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\bin\Debug\System.Data.SQLite.xml
+C:\Users\deboltm\Documents\GitHub\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite to JSON.csprojAssemblyReference.cache
+C:\Users\deboltm\Documents\GitHub\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite_to_JSON.AddItem.resources
+C:\Users\deboltm\Documents\GitHub\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite_to_JSON.DialogBox.resources
+C:\Users\deboltm\Documents\GitHub\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite_to_JSON.Home.resources
+C:\Users\deboltm\Documents\GitHub\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite_to_JSON.JSONResult.resources
+C:\Users\deboltm\Documents\GitHub\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite_to_JSON.ManageItems.resources
+C:\Users\deboltm\Documents\GitHub\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite_to_JSON.Properties.Resources.resources
+C:\Users\deboltm\Documents\GitHub\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite to JSON.csproj.GenerateResource.cache
+C:\Users\deboltm\Documents\GitHub\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite to JSON.csproj.CoreCompileInputs.cache
+C:\Users\deboltm\Documents\GitHub\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite to JSON.csproj.CopyComplete
+C:\Users\deboltm\Documents\GitHub\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite to JSON.exe
+C:\Users\deboltm\Documents\GitHub\ugamer.github.io\Wishlist\SQLite to JSON\SQLite to JSON\SQLite to JSON\obj\Debug\SQLite to JSON.pdb

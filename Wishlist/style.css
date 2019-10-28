@@ -44,6 +44,7 @@ th {
 	border: 1px solid black;
 	color: white;
 	background-color: black;
+	cursor: pointer;
 }
 
 #sortButtons {
@@ -51,6 +52,7 @@ th {
 	margin: none;
 	width: 33%;
 	background-color: transparent;
+	cursor: normal;
 }
 
 a {

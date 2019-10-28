@@ -67,6 +67,7 @@
             this.DeleteEntryButton.Name = "DeleteEntryButton";
             this.DeleteEntryButton.Size = new System.Drawing.Size(180, 22);
             this.DeleteEntryButton.Text = "Delete Entry";
+            this.DeleteEntryButton.Click += new System.EventHandler(this.DeleteEntryButton_Click);
             // 
             // ManageItems
             // 

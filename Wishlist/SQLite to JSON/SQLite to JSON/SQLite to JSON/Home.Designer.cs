@@ -61,6 +61,7 @@
             this.AddTableButton.Text = "Add Table/Event";
             this.AddTableButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.AddTableButton.UseVisualStyleBackColor = true;
+            this.AddTableButton.Click += new System.EventHandler(this.AddTableButton_Click);
             // 
             // ManageItems
             // 

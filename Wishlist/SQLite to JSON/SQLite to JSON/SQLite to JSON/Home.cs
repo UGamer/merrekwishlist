@@ -52,5 +52,10 @@ namespace SQLite_to_JSON
             DialogBox dialogBox = new DialogBox(tableTable, "ManageItems");
             dialogBox.Show();
         }
+
+        private void AddTableButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
