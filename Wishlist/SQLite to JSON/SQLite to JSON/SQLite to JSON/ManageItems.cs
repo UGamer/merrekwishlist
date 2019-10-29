@@ -31,7 +31,7 @@ namespace SQLite_to_JSON
             FillDGV();
         }
 
-        private void FillDGV()
+        public void FillDGV()
         {
             DGV.DataSource = null;
 
@@ -89,6 +89,25 @@ namespace SQLite_to_JSON
 
                 FillDGV();
             }
+        }
+
+        private void MoveEntryButton_Click(object sender, EventArgs e)
+        {
+            con = new SQLiteConnection(connectionString);
+            SQLiteCommand tableCmd = new SQLiteCommand("SELECT * FROM TableRegistry", con);
+            DataTable tableTable;
+
+            con.Open();
+
+            tableCmd.CommandType = CommandType.Text;
+            SQLiteDataAdapter da = new SQLiteDataAdapter(tableCmd);
+            tableTable = new DataTable();
+            da.Fill(tableTable);
+
+            con.Close();
+
+            DialogBox dialogBox = new DialogBox(tableTable, tableString, DGV.Rows[rowIndex], this);
+            dialogBox.Show();
         }
     }
 }

@@ -16,14 +16,13 @@ namespace SQLite_to_JSON
         static string connectionString = "Data Source=items.db;Version=3;";
         static SQLiteConnection con;
 
-        string type;
-
         public NewTable()
         {
+            con = new SQLiteConnection(connectionString);
             InitializeComponent();
         }
 
-        private void OKButton_Click(object sender, EventArgs e)
+        private void Submit()
         {
             SQLiteCommand selectCmd = new SQLiteCommand("SELECT * FROM TableRegistry", con);
 
@@ -45,8 +44,14 @@ namespace SQLite_to_JSON
                     highestId = rowId + 1;
             }
 
-            SQLiteCommand tableCmd = new SQLiteCommand("CREATE TABLE \"Christmas2019\" (\"Id\" INTEGER NOT NULL UNIQUE, \"ImageTitle\" TEXT, \"Title\" TEXT NOT NULL, \"Want\" INTEGER NOT NULL, \"Price\" FLOAT NOT NULL, \"DeliveryTime\" INTEGER, \"Description\" TEXT, \"URL\" TEXT, PRIMARY KEY(\"Id\");", con);
-            SQLiteCommand registerCmd = new SQLiteCommand("INSERT INTO TableRegistry (Id, Title) VALUES (" + highestId + ", " + TableBox.Text + ");", con);
+            highestId++;
+
+            // SQLiteCommand tableCmd = new SQLiteCommand("CREATE TABLE \""+ TableBox.Text + "\" (\"Id\" INTEGER NOT NULL UNIQUE, \"ImageTitle\" TEXT, \"Title\" TEXT NOT NULL, \"Want\" INTEGER NOT NULL, \"Price\" FLOAT NOT NULL, \"DeliveryTime\" INTEGER, \"Description\" TEXT, \"URL\" TEXT, PRIMARY KEY(\"Id\");", con);
+            SQLiteCommand tableCmd = new SQLiteCommand("CREATE TABLE " + TableBox.Text + " (Id INTEGER PRIMARY KEY, ImageTitle TEXT, Title TEXT NOT NULL, Want INTEGER NOT NULL, Price FLOAT NOT NULL, DeliveryTime INTEGER, Description TEXT, URL TEXT);", con);
+            SQLiteCommand registerCmd = new SQLiteCommand("INSERT INTO TableRegistry ([Id], [Title]) VALUES (@Id, @Title);", con);
+
+            registerCmd.Parameters.AddWithValue("@Id", highestId);
+            registerCmd.Parameters.AddWithValue("@Title", TableBox.Text);
 
             con.Open();
             tableCmd.ExecuteNonQuery();
@@ -56,6 +61,17 @@ namespace SQLite_to_JSON
             MessageBox.Show("Table successfully created.", "Success!");
 
             this.Close();
+        }
+
+        private void OKButton_Click(object sender, EventArgs e)
+        {
+            Submit();
+        }
+
+        private void TableBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+                Submit();
         }
     }
 }

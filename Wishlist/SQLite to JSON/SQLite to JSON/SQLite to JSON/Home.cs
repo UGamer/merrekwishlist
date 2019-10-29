@@ -55,7 +55,8 @@ namespace SQLite_to_JSON
 
         private void AddTableButton_Click(object sender, EventArgs e)
         {
-
+            NewTable newTable = new NewTable();
+            newTable.Show();
         }
     }
 }

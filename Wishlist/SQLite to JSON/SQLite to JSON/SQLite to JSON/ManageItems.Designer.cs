@@ -33,6 +33,7 @@
             this.DGVContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.EditEntryButton = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteEntryButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.MoveEntryButton = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
             this.DGVContextMenu.SuspendLayout();
             this.SuspendLayout();
@@ -51,9 +52,10 @@
             // 
             this.DGVContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.EditEntryButton,
-            this.DeleteEntryButton});
+            this.DeleteEntryButton,
+            this.MoveEntryButton});
             this.DGVContextMenu.Name = "DGVContextMenu";
-            this.DGVContextMenu.Size = new System.Drawing.Size(181, 70);
+            this.DGVContextMenu.Size = new System.Drawing.Size(181, 92);
             // 
             // EditEntryButton
             // 
@@ -68,6 +70,13 @@
             this.DeleteEntryButton.Size = new System.Drawing.Size(180, 22);
             this.DeleteEntryButton.Text = "Delete Entry";
             this.DeleteEntryButton.Click += new System.EventHandler(this.DeleteEntryButton_Click);
+            // 
+            // MoveEntryButton
+            // 
+            this.MoveEntryButton.Name = "MoveEntryButton";
+            this.MoveEntryButton.Size = new System.Drawing.Size(180, 22);
+            this.MoveEntryButton.Text = "Move Entry";
+            this.MoveEntryButton.Click += new System.EventHandler(this.MoveEntryButton_Click);
             // 
             // ManageItems
             // 
@@ -89,5 +98,6 @@
         private System.Windows.Forms.ContextMenuStrip DGVContextMenu;
         private System.Windows.Forms.ToolStripMenuItem EditEntryButton;
         private System.Windows.Forms.ToolStripMenuItem DeleteEntryButton;
+        private System.Windows.Forms.ToolStripMenuItem MoveEntryButton;
     }
 }

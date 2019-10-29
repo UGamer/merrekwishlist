@@ -50,11 +50,14 @@
             // 
             // ImageBox
             // 
+            this.ImageBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ImageBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ImageBox.Location = new System.Drawing.Point(13, 13);
             this.ImageBox.Name = "ImageBox";
             this.ImageBox.Size = new System.Drawing.Size(228, 221);
             this.ImageBox.TabIndex = 0;
             this.ImageBox.TabStop = false;
+            this.ImageBox.Click += new System.EventHandler(this.ImageBox_Click);
             // 
             // ImageTitleBox
             // 
@@ -98,7 +101,7 @@
             this.DescriptionBox.Multiline = true;
             this.DescriptionBox.Name = "DescriptionBox";
             this.DescriptionBox.Size = new System.Drawing.Size(540, 109);
-            this.DescriptionBox.TabIndex = 4;
+            this.DescriptionBox.TabIndex = 6;
             // 
             // WantBar
             // 
@@ -107,8 +110,9 @@
             this.WantBar.Minimum = 1;
             this.WantBar.Name = "WantBar";
             this.WantBar.Size = new System.Drawing.Size(539, 45);
-            this.WantBar.TabIndex = 6;
+            this.WantBar.TabIndex = 3;
             this.WantBar.Value = 5;
+            this.WantBar.ValueChanged += new System.EventHandler(this.WantBar_ValueChanged);
             // 
             // WantLabel
             // 
@@ -116,9 +120,9 @@
             this.WantLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WantLabel.Location = new System.Drawing.Point(248, 89);
             this.WantLabel.Name = "WantLabel";
-            this.WantLabel.Size = new System.Drawing.Size(48, 20);
+            this.WantLabel.Size = new System.Drawing.Size(69, 20);
             this.WantLabel.TabIndex = 7;
-            this.WantLabel.Text = "Want";
+            this.WantLabel.Text = "Want - 5";
             // 
             // PriceLabel
             // 
@@ -136,7 +140,7 @@
             this.PriceBox.Location = new System.Drawing.Point(283, 173);
             this.PriceBox.Name = "PriceBox";
             this.PriceBox.Size = new System.Drawing.Size(140, 50);
-            this.PriceBox.TabIndex = 8;
+            this.PriceBox.TabIndex = 4;
             // 
             // DeliveryTimeLabel
             // 
@@ -154,7 +158,7 @@
             this.DeliveryTimeBox.Location = new System.Drawing.Point(435, 173);
             this.DeliveryTimeBox.Name = "DeliveryTimeBox";
             this.DeliveryTimeBox.Size = new System.Drawing.Size(352, 50);
-            this.DeliveryTimeBox.TabIndex = 10;
+            this.DeliveryTimeBox.TabIndex = 5;
             // 
             // URLLabel
             // 
@@ -171,8 +175,8 @@
             this.URLBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.URLBox.Location = new System.Drawing.Point(252, 399);
             this.URLBox.Name = "URLBox";
-            this.URLBox.Size = new System.Drawing.Size(540, 27);
-            this.URLBox.TabIndex = 12;
+            this.URLBox.Size = new System.Drawing.Size(495, 27);
+            this.URLBox.TabIndex = 7;
             // 
             // SubmitButton
             // 

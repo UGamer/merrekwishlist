@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -36,6 +38,7 @@ namespace SQLite_to_JSON
 
             id = row.Cells["Id"].Value.ToString();
             ImageTitleBox.Text = row.Cells["ImageTitle"].Value.ToString();
+            ImageBox.BackgroundImage = Image.FromFile(@"img\" + destTable + @"\" + ImageTitleBox.Text + ".png");
             TitleBox.Text = row.Cells["Title"].Value.ToString();
             WantBar.Value = Convert.ToInt32(row.Cells["Want"].Value.ToString());
             PriceBox.Text = row.Cells["Price"].Value.ToString();
@@ -93,6 +96,9 @@ namespace SQLite_to_JSON
                 insertCmd.Parameters.RemoveAt("@DeliveryTime");
                 insertCmd.Parameters.RemoveAt("@Description");
                 insertCmd.Parameters.RemoveAt("@URL");
+
+                try { ImageBox.BackgroundImage.Save(@"img\" + destTable + @"\" + ImageTitleBox.Text + ".png"); }
+                catch { }
             }
             else if (type == "Edit")
             {
@@ -123,6 +129,47 @@ namespace SQLite_to_JSON
                 updateCmd.Parameters.RemoveAt("@Description");
                 updateCmd.Parameters.RemoveAt("@URL");
             }
+        }
+
+        private void ImageBox_Click(object sender, EventArgs e)
+        {
+            Browser browser = new Browser(URLBox.Text);
+
+            DialogResult dialogResult = browser.ShowDialog();
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                string downloadUrl = browser.downloadUrl;
+
+                /*
+                string fileExt = browser.url;
+                while (fileExt.IndexOf(".") != -1)
+                {
+                    fileExt = fileExt.Substring(fileExt.IndexOf(".") + 1);
+                }
+                */
+
+                WebClient webClient = new WebClient();
+                try
+                {
+                    byte[] imageBytes = webClient.DownloadData(downloadUrl);
+                    Console.WriteLine(imageBytes.LongLength);
+
+                    using (var ms = new MemoryStream(imageBytes))
+                    {
+                        ImageBox.BackgroundImage = Image.FromStream(ms);
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Image download failed.");
+                }
+            }
+        }
+
+        private void WantBar_ValueChanged(object sender, EventArgs e)
+        {
+            WantLabel.Text = "Want - " + WantBar.Value;
         }
     }
 }

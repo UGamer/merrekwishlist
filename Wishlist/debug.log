@@ -1,0 +1,5 @@
+[1028/212441.004:INFO:CONSOLE(711)] "No facebook pixel is configured, please log in as a admin and then visit Facebook Ads Extension -> Get Started", source: https://www.cokestore.com/goods/collectibles/plush-bears/coca-cola-6-polar-bear-with-scarf (711)
+[1028/212441.245:INFO:CONSOLE(3420)] "window_constructor_does_not_match_window", source: https://www.paypalobjects.com/api/checkout.js?3.48.0 (3420)
+[1028/212441.268:INFO:CONSOLE(953)] "Uncaught SyntaxError: Invalid or unexpected token", source: https://www.cokestore.com/goods/collectibles/plush-bears/coca-cola-6-polar-bear-with-scarf (953)
+[1028/212441.268:INFO:CONSOLE(997)] "Uncaught SyntaxError: Invalid or unexpected token", source: https://www.cokestore.com/goods/collectibles/plush-bears/coca-cola-6-polar-bear-with-scarf (997)
+[1028/212443.279:WARNING:spdy_session.cc(3326)] Received HEADERS for invalid stream 5

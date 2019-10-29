@@ -58,6 +58,7 @@
             this.TableBox.Name = "TableBox";
             this.TableBox.Size = new System.Drawing.Size(272, 20);
             this.TableBox.TabIndex = 3;
+            this.TableBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TableBox_KeyUp);
             // 
             // NewTable
             // 
