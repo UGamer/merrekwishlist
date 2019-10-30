@@ -3,3 +3,10 @@
 [1028/212441.268:INFO:CONSOLE(953)] "Uncaught SyntaxError: Invalid or unexpected token", source: https://www.cokestore.com/goods/collectibles/plush-bears/coca-cola-6-polar-bear-with-scarf (953)
 [1028/212441.268:INFO:CONSOLE(997)] "Uncaught SyntaxError: Invalid or unexpected token", source: https://www.cokestore.com/goods/collectibles/plush-bears/coca-cola-6-polar-bear-with-scarf (997)
 [1028/212443.279:WARNING:spdy_session.cc(3326)] Received HEADERS for invalid stream 5
+[1029/221428.970:WARNING:backend_impl.cc(1846)] Destroying invalid entry.
+[1029/221429.190:WARNING:spdy_session.cc(3326)] Received HEADERS for invalid stream 53
+[1029/221429.191:WARNING:spdy_session.cc(3326)] Received HEADERS for invalid stream 55
+[1029/221429.202:WARNING:spdy_session.cc(3326)] Received HEADERS for invalid stream 1
+[1029/221429.240:WARNING:spdy_session.cc(3326)] Received HEADERS for invalid stream 59
+[1029/221429.289:WARNING:spdy_session.cc(3326)] Received HEADERS for invalid stream 57
+[1029/231320.186:ERROR:browser_process_sub_thread.cc(221)] Waited 23 ms for network service
