@@ -10,3 +10,7 @@
 [1029/221429.240:WARNING:spdy_session.cc(3326)] Received HEADERS for invalid stream 59
 [1029/221429.289:WARNING:spdy_session.cc(3326)] Received HEADERS for invalid stream 57
 [1029/231320.186:ERROR:browser_process_sub_thread.cc(221)] Waited 23 ms for network service
+[1030/141014.263:INFO:CONSOLE(1)] "undefined", source: https://staticx.ibncollege.com/wcsstore/ConsumerDirectStorefrontAssetStore/javascript_new_ui/gmbrowse.js (1)
+[1030/141015.045:INFO:CONSOLE(4)] "Synchronous XMLHttpRequest on the main thread is deprecated because of its detrimental effects to the end user's experience. For more help, check https://xhr.spec.whatwg.org/.", source: https://staticx.ibncollege.com/wcsstore/ConsumerDirectStorefrontAssetStore/javascript_new_ui/libs/jquery-1.7.1.min.js (4)
+[1030/141015.860:INFO:CONSOLE(1)] "300000188110", source: https://staticx.ibncollege.com/wcsstore/ConsumerDirectStorefrontAssetStore/javascript_new_ui/gmbrowse.js (1)
+[1030/141313.181:ERROR:browser_process_sub_thread.cc(221)] Waited 9 ms for network service
