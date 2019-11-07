@@ -1,19 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SQLite_to_JSON
 {
-    public partial class JSONResult : Form
+    public class JSONResult
     {
-        public JSONResult(DataTable table)
+        public static void Convert(DataTable table)
         {
             string jsonString = "data = '[";
 
@@ -36,33 +33,33 @@ namespace SQLite_to_JSON
 
                 Console.WriteLine("Replaced stuff in imageTitle");
 
-                    title = rgxFix1.Replace(title, "\\\'");
-                    title = rgxFix2.Replace(title, "\\\'\\\'");
+                title = rgxFix1.Replace(title, "\\\'");
+                title = rgxFix2.Replace(title, "\\\'\\\'");
 
                 Console.WriteLine("Replaced stuff in title");
 
-                    want = rgxFix1.Replace(want, "\\\'");
-                    want = rgxFix2.Replace(want, "\\\'\\\'");
+                want = rgxFix1.Replace(want, "\\\'");
+                want = rgxFix2.Replace(want, "\\\'\\\'");
 
                 Console.WriteLine("Replaced stuff in want");
 
-                    price = rgxFix1.Replace(price, "\\\'");
-                    price = rgxFix2.Replace(price, "\\\'\\\'");
+                price = rgxFix1.Replace(price, "\\\'");
+                price = rgxFix2.Replace(price, "\\\'\\\'");
 
                 Console.WriteLine("Replaced stuff in price");
 
-                    deliveryTime = rgxFix1.Replace(deliveryTime, "\\\'");
-                    deliveryTime = rgxFix2.Replace(deliveryTime, "\\\'\\\'");
+                deliveryTime = rgxFix1.Replace(deliveryTime, "\\\'");
+                deliveryTime = rgxFix2.Replace(deliveryTime, "\\\'\\\'");
 
                 Console.WriteLine("Replaced stuff in deliveryTime");
 
-                    description = rgxFix1.Replace(description, "\\\'");
-                    description = rgxFix2.Replace(description, "\\\'\\\'");
+                description = rgxFix1.Replace(description, "\\\'");
+                description = rgxFix2.Replace(description, "\\\'\\\'");
 
                 Console.WriteLine("Replaced stuff in description");
 
-                    url = rgxFix1.Replace(url, "\\\'");
-                    url = rgxFix2.Replace(url, "\\\'\\\'");
+                url = rgxFix1.Replace(url, "\\\'");
+                url = rgxFix2.Replace(url, "\\\'\\\'");
 
                 Console.WriteLine("Replaced stuff in url");
 
@@ -88,9 +85,7 @@ namespace SQLite_to_JSON
             jsonString = jsonString.Substring(0, jsonString.Length - 1);
             jsonString += "]';";
 
-            InitializeComponent();
-
-            ResultBox.Text = jsonString;
+            System.IO.File.WriteAllText(@"data.json", jsonString);
         }
     }
 }

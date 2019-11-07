@@ -68,6 +68,7 @@
     <Compile Include="Browser.Designer.cs">
       <DependentUpon>Browser.cs</DependentUpon>
     </Compile>
+    <Compile Include="JSONResult.cs" />
     <Compile Include="MenuHandler.cs" />
     <Compile Include="NewTable.cs">
       <SubType>Form</SubType>
@@ -86,12 +87,6 @@
     </Compile>
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
-    </Compile>
-    <Compile Include="JSONResult.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="JSONResult.Designer.cs">
-      <DependentUpon>JSONResult.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageItems.cs">
       <SubType>Form</SubType>
@@ -112,9 +107,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="JSONResult.resx">
-      <DependentUpon>JSONResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageItems.resx">
       <DependentUpon>ManageItems.cs</DependentUpon>

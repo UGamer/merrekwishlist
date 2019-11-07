@@ -60,8 +60,9 @@ namespace SQLite_to_JSON
 
                 con.Close();
 
-                JSONResult result = new JSONResult(table);
-                result.Show();
+                JSONResult.Convert(table);
+
+                MessageBox.Show("\"data.json\" successfully written.", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.Close();
             }
