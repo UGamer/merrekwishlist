@@ -19,6 +19,7 @@ namespace SQLite_to_JSON
         string type;
         DataGridViewRow row;
         string id;
+        ManageItems refer;
 
         public AddItem(string destTable, string type)
         {
@@ -28,17 +29,18 @@ namespace SQLite_to_JSON
             InitializeComponent();
         }
 
-        public AddItem(string destTable, string type, DataGridViewRow row)
+        public AddItem(string destTable, string type, DataGridViewRow row, ManageItems refer)
         {
             this.type = type;
             this.destTable = destTable;
             this.row = row;
+            this.refer = refer;
 
             InitializeComponent();
 
             id = row.Cells["Id"].Value.ToString();
             ImageTitleBox.Text = row.Cells["ImageTitle"].Value.ToString();
-            ImageBox.BackgroundImage = Image.FromFile(@"img\" + destTable + @"\" + ImageTitleBox.Text + ".png");
+            ImageBox.BackgroundImage = Image.FromFile(@"img\" + ImageTitleBox.Text + ".png");
             TitleBox.Text = row.Cells["Title"].Value.ToString();
             WantBar.Value = Convert.ToInt32(row.Cells["Want"].Value.ToString());
             PriceBox.Text = row.Cells["Price"].Value.ToString();
@@ -97,7 +99,7 @@ namespace SQLite_to_JSON
                 insertCmd.Parameters.RemoveAt("@Description");
                 insertCmd.Parameters.RemoveAt("@URL");
 
-                try { ImageBox.BackgroundImage.Save(@"img\" + destTable + @"\" + ImageTitleBox.Text + ".png"); }
+                try { ImageBox.BackgroundImage.Save(@"img\" + ImageTitleBox.Text + ".png"); }
                 catch { }
             }
             else if (type == "Edit")
@@ -128,6 +130,32 @@ namespace SQLite_to_JSON
                 updateCmd.Parameters.RemoveAt("@DeliveryTime");
                 updateCmd.Parameters.RemoveAt("@Description");
                 updateCmd.Parameters.RemoveAt("@URL");
+
+                try
+                {
+                    string sortByString = refer.DGV.SortedColumn.HeaderText;
+
+                    ListSortDirection sortOrder = ListSortDirection.Ascending;
+                    if (refer.DGV.SortOrder == SortOrder.Ascending)
+                        sortOrder = ListSortDirection.Ascending;
+                    if (refer.DGV.SortOrder == SortOrder.Descending)
+                        sortOrder = ListSortDirection.Descending;
+
+                    refer.FillDGV();
+
+                    DataGridViewColumn sortBy = new DataGridViewColumn();
+                    for (int index = 0; index < refer.DGV.Columns.Count; index++)
+                    {
+                        if (refer.DGV.Columns[index].HeaderText == sortByString)
+                        {
+                            sortBy = refer.DGV.Columns[index];
+                            break;
+                        }
+                    }
+
+                    refer.DGV.Sort(sortBy, sortOrder);
+                }
+                catch { refer.FillDGV(); }
             }
         }
 

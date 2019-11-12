@@ -13,7 +13,7 @@ function load() {
 	var code = "<table id=\"dataTable\"><tr id=\"heading\"><th></th><th style=\"width:15%;\" onclick=\"sortTable(1)\">Title</th><th style=\"width:5%;\" onclick=\"sortTable(2)\">Want Rating</th><th style=\"width:5%;\" onclick=\"sortTable(3)\">Price</th><th style=\"width:5%;\" onclick=\"sortTable(4)\">Delivery Time</th><th style=\"width:20%;\">Description</th></tr>";
 	for (index = 0; index < mydata.length; index++)
 	{
-		code += "<tr><td><a href=\"" + mydata[index].url + "\" target=\"_blank\"><img src=\"img\\Christmas2019\\" + mydata[index].imageTitle + ".png\" style=\"width=100%;\"></a></td>";
+		code += "<tr><td><a href=\"" + mydata[index].url + "\" target=\"_blank\"><img src=\"img\\" + mydata[index].imageTitle + ".png\" style=\"width=100%;\"></a></td>";
 		code += "<td style=\"width:15%;\">" + mydata[index].title + "</td>";
 		code += "<td style=\"width:5%;\">" + mydata[index].want + "</td>";
 		code += "<td style=\"width:5%;\">" + mydata[index].price + "</td>";
@@ -31,6 +31,8 @@ function sortTable(n) {
   switching = true;
   // Set the sorting direction to ascending:
   dir = "asc";
+  if (n == 2)
+	  dir = "desc";
   /* Make a loop that will continue until
   no switching has been done: */
   while (switching) {

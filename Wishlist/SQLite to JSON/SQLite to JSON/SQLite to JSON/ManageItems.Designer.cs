@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DGV = new System.Windows.Forms.DataGridView();
             this.DGVContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.EditEntryButton = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,10 +41,16 @@
             // 
             // DGV
             // 
+            this.DGV.AllowUserToAddRows = false;
+            this.DGV.AllowUserToDeleteRows = false;
+            this.DGV.AllowUserToResizeRows = false;
             this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGV.Location = new System.Drawing.Point(0, 0);
             this.DGV.Name = "DGV";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DGV.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGV.RowTemplate.Height = 50;
             this.DGV.Size = new System.Drawing.Size(800, 450);
             this.DGV.TabIndex = 0;
             this.DGV.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_CellMouseUp);
@@ -55,26 +62,26 @@
             this.DeleteEntryButton,
             this.MoveEntryButton});
             this.DGVContextMenu.Name = "DGVContextMenu";
-            this.DGVContextMenu.Size = new System.Drawing.Size(181, 92);
+            this.DGVContextMenu.Size = new System.Drawing.Size(138, 70);
             // 
             // EditEntryButton
             // 
             this.EditEntryButton.Name = "EditEntryButton";
-            this.EditEntryButton.Size = new System.Drawing.Size(180, 22);
+            this.EditEntryButton.Size = new System.Drawing.Size(137, 22);
             this.EditEntryButton.Text = "Edit Entry";
             this.EditEntryButton.Click += new System.EventHandler(this.EditEntryButton_Click);
             // 
             // DeleteEntryButton
             // 
             this.DeleteEntryButton.Name = "DeleteEntryButton";
-            this.DeleteEntryButton.Size = new System.Drawing.Size(180, 22);
+            this.DeleteEntryButton.Size = new System.Drawing.Size(137, 22);
             this.DeleteEntryButton.Text = "Delete Entry";
             this.DeleteEntryButton.Click += new System.EventHandler(this.DeleteEntryButton_Click);
             // 
             // MoveEntryButton
             // 
             this.MoveEntryButton.Name = "MoveEntryButton";
-            this.MoveEntryButton.Size = new System.Drawing.Size(180, 22);
+            this.MoveEntryButton.Size = new System.Drawing.Size(137, 22);
             this.MoveEntryButton.Text = "Move Entry";
             this.MoveEntryButton.Click += new System.EventHandler(this.MoveEntryButton_Click);
             // 
@@ -93,11 +100,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView DGV;
         private System.Windows.Forms.ContextMenuStrip DGVContextMenu;
         private System.Windows.Forms.ToolStripMenuItem EditEntryButton;
         private System.Windows.Forms.ToolStripMenuItem DeleteEntryButton;
         private System.Windows.Forms.ToolStripMenuItem MoveEntryButton;
+        public System.Windows.Forms.DataGridView DGV;
     }
 }

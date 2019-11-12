@@ -45,7 +45,23 @@ namespace SQLite_to_JSON
 
             con.Close();
 
+            table.Columns.Add("Image", typeof(Image));
+            table.Columns["Image"].SetOrdinal(0);
+
+            string imageTitle;
+            for (int index = 0; index < table.Rows.Count; index++)
+            {
+                imageTitle = table.Rows[index]["ImageTitle"].ToString();
+                try { table.Rows[index]["Image"] = Image.FromFile(@"img\" + imageTitle + ".png"); } catch { }
+            }
+
             DGV.DataSource = table;
+
+            DGV.Columns[0].Width = 50;
+            ((DataGridViewImageColumn)DGV.Columns[0]).ImageLayout = DataGridViewImageCellLayout.Zoom;
+
+            DGV.Columns["Id"].Visible = false;
+            DGV.Columns["ImageTitle"].Visible = false;
         }
 
         private void DGV_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
@@ -70,10 +86,8 @@ namespace SQLite_to_JSON
 
         private void EditEntryButton_Click(object sender, EventArgs e)
         {
-            AddItem editItem = new AddItem(tableString, "Edit", DGV.Rows[rowIndex]);
+            AddItem editItem = new AddItem(tableString, "Edit", DGV.Rows[rowIndex], this);
             editItem.Show();
-
-            this.Close();
         }
 
         private void DeleteEntryButton_Click(object sender, EventArgs e)

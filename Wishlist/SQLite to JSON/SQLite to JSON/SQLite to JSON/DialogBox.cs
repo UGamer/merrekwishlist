@@ -85,7 +85,7 @@ namespace SQLite_to_JSON
                 con = new SQLiteConnection(connectionString);
 
                 // Delete from first table (use type)
-                int id = Convert.ToInt32(item.Cells[0].Value.ToString());
+                int id = Convert.ToInt32(item.Cells["Id"].Value.ToString());
                 SQLiteCommand deleteCmd = new SQLiteCommand("DELETE FROM " + type + " WHERE Id = " + id + ";", con);
 
                 // Add to new table (use DropDownBox.Text)
