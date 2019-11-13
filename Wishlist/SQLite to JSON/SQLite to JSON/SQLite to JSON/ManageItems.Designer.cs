@@ -54,6 +54,7 @@
             this.DGV.Size = new System.Drawing.Size(800, 450);
             this.DGV.TabIndex = 0;
             this.DGV.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_CellMouseUp);
+            this.DGV.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_CellValueChanged);
             // 
             // DGVContextMenu
             // 

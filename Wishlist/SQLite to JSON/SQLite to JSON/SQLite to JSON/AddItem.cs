@@ -104,7 +104,6 @@ namespace SQLite_to_JSON
             }
             else if (type == "Edit")
             {
-
                 SQLiteCommand updateCmd = new SQLiteCommand("UPDATE " + destTable + " SET ImageTitle = @ImageTitle, Title = @Title, Want = @Want, Price = @Price, DeliveryTime = @DeliveryTime," +
                     " Description = @Description, URL = @URL WHERE Id = " + id + ";", con);
                 

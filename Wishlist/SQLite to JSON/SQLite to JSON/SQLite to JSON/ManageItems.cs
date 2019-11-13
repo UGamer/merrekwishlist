@@ -123,5 +123,52 @@ namespace SQLite_to_JSON
             DialogBox dialogBox = new DialogBox(tableTable, tableString, DGV.Rows[rowIndex], this);
             dialogBox.Show();
         }
+
+        private void DGV_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            SQLiteCommand updateCmd = new SQLiteCommand("UPDATE " + tableString + " SET ImageTitle = @ImageTitle, Title = @Title, Want = @Want, Price = @Price, DeliveryTime = @DeliveryTime," +
+                    " Description = @Description, URL = @URL WHERE Id = " + Convert.ToInt32(DGV.Rows[e.RowIndex].Cells["Id"].Value.ToString()) + ";", con);
+
+            con.Open();
+
+            updateCmd.Parameters.AddWithValue("@ImageTitle", DGV.Rows[e.RowIndex].Cells["ImageTitle"].Value.ToString());
+            updateCmd.Parameters.AddWithValue("@Title", DGV.Rows[e.RowIndex].Cells["Title"].Value.ToString());
+            updateCmd.Parameters.AddWithValue("@Want", Convert.ToInt32(DGV.Rows[e.RowIndex].Cells["Want"].Value.ToString()));
+            updateCmd.Parameters.AddWithValue("@Price", Convert.ToDouble(DGV.Rows[e.RowIndex].Cells["Price"].Value.ToString()));
+            updateCmd.Parameters.AddWithValue("@DeliveryTime", DGV.Rows[e.RowIndex].Cells["DeliveryTime"].Value.ToString());
+            updateCmd.Parameters.AddWithValue("@Description", DGV.Rows[e.RowIndex].Cells["Description"].Value.ToString());
+            updateCmd.Parameters.AddWithValue("@URL", DGV.Rows[e.RowIndex].Cells["URL"].Value.ToString());
+            
+            updateCmd.ExecuteNonQuery();
+            con.Close();
+
+            updateCmd.Parameters.RemoveAt("@ImageTitle");
+            updateCmd.Parameters.RemoveAt("@Title");
+            updateCmd.Parameters.RemoveAt("@Want");
+            updateCmd.Parameters.RemoveAt("@Price");
+            updateCmd.Parameters.RemoveAt("@DeliveryTime");
+            updateCmd.Parameters.RemoveAt("@Description");
+            updateCmd.Parameters.RemoveAt("@URL");
+
+            string sortByString = DGV.SortedColumn.HeaderText;
+
+            ListSortDirection sortOrder = ListSortDirection.Ascending;
+            if (DGV.SortOrder == SortOrder.Ascending)
+                sortOrder = ListSortDirection.Ascending;
+            if (DGV.SortOrder == SortOrder.Descending)
+                sortOrder = ListSortDirection.Descending;
+
+            DataGridViewColumn sortBy = new DataGridViewColumn();
+            for (int index = 0; index < DGV.Columns.Count; index++)
+            {
+                if (DGV.Columns[index].HeaderText == sortByString)
+                {
+                    sortBy = DGV.Columns[index];
+                    break;
+                }
+            }
+
+            DGV.Sort(sortBy, sortOrder);
+        }
     }
 }
