@@ -33,6 +33,23 @@ namespace SQLite_to_JSON
 
         public void FillDGV()
         {
+            string sortByString = "";
+            DataGridViewColumn sortBy = new DataGridViewColumn();
+            ListSortDirection sortOrder = ListSortDirection.Ascending;
+            bool sort = false;
+            try
+            {
+                sortByString = DGV.SortedColumn.HeaderText;
+
+                if (DGV.SortOrder == SortOrder.Ascending)
+                    sortOrder = ListSortDirection.Ascending;
+                if (DGV.SortOrder == SortOrder.Descending)
+                    sortOrder = ListSortDirection.Descending;
+
+                sort = true;
+            }
+            catch { }
+
             DGV.DataSource = null;
 
             SQLiteCommand selectCmd = new SQLiteCommand("SELECT * FROM " + tableString, con);
@@ -62,6 +79,21 @@ namespace SQLite_to_JSON
 
             DGV.Columns["Id"].Visible = false;
             DGV.Columns["ImageTitle"].Visible = false;
+
+            if (sort)
+            {
+                sortBy = new DataGridViewColumn();
+                for (int index = 0; index < DGV.Columns.Count; index++)
+                {
+                    if (DGV.Columns[index].HeaderText == sortByString)
+                    {
+                        sortBy = DGV.Columns[index];
+                        break;
+                    }
+                }
+
+                DGV.Sort(sortBy, sortOrder);
+            }
         }
 
         private void DGV_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
@@ -70,7 +102,7 @@ namespace SQLite_to_JSON
             {
                 if (e.Button == MouseButtons.Right)
                 {
-                    this.DGV.Rows[e.RowIndex].Selected = true;
+                    // this.DGV.Rows[e.RowIndex].Selected = true;
 
                     this.rowIndex = e.RowIndex;
 
@@ -92,16 +124,36 @@ namespace SQLite_to_JSON
 
         private void DeleteEntryButton_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to delete item \"" + DGV.Rows[rowIndex].Cells["Title"].Value.ToString() + "\"", "Are you sure?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (DGV.SelectedRows.Count > 1)
             {
-                int id = Convert.ToInt32(DGV.Rows[rowIndex].Cells["Id"].Value.ToString());
-                SQLiteCommand deleteCmd = new SQLiteCommand("DELETE FROM " + tableString + " WHERE Id = " + id, con);
+                if (MessageBox.Show("Are you sure you want to delete these items?", "Are you sure?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    for (int index = 0; index < DGV.SelectedRows.Count; index++)
+                    {
+                        int id = Convert.ToInt32(DGV.SelectedRows[index].Cells["Id"].Value.ToString());
+                        SQLiteCommand deleteCmd = new SQLiteCommand("DELETE FROM " + tableString + " WHERE Id = " + id, con);
 
-                con.Open();
-                deleteCmd.ExecuteNonQuery();
-                con.Close();
+                        con.Open();
+                        deleteCmd.ExecuteNonQuery();
+                        con.Close();
+                    }
 
-                FillDGV();
+                    FillDGV();
+                }
+            }
+            else
+            {
+                if (MessageBox.Show("Are you sure you want to delete item \"" + DGV.Rows[rowIndex].Cells["Title"].Value.ToString() + "\"", "Are you sure?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    int id = Convert.ToInt32(DGV.Rows[rowIndex].Cells["Id"].Value.ToString());
+                    SQLiteCommand deleteCmd = new SQLiteCommand("DELETE FROM " + tableString + " WHERE Id = " + id, con);
+
+                    con.Open();
+                    deleteCmd.ExecuteNonQuery();
+                    con.Close();
+
+                    FillDGV();
+                }
             }
         }
 
@@ -120,7 +172,7 @@ namespace SQLite_to_JSON
 
             con.Close();
 
-            DialogBox dialogBox = new DialogBox(tableTable, tableString, DGV.Rows[rowIndex], this);
+            DialogBox dialogBox = new DialogBox(tableTable, tableString, DGV.SelectedRows, this);
             dialogBox.Show();
         }
 
@@ -150,25 +202,7 @@ namespace SQLite_to_JSON
             updateCmd.Parameters.RemoveAt("@Description");
             updateCmd.Parameters.RemoveAt("@URL");
 
-            string sortByString = DGV.SortedColumn.HeaderText;
-
-            ListSortDirection sortOrder = ListSortDirection.Ascending;
-            if (DGV.SortOrder == SortOrder.Ascending)
-                sortOrder = ListSortDirection.Ascending;
-            if (DGV.SortOrder == SortOrder.Descending)
-                sortOrder = ListSortDirection.Descending;
-
-            DataGridViewColumn sortBy = new DataGridViewColumn();
-            for (int index = 0; index < DGV.Columns.Count; index++)
-            {
-                if (DGV.Columns[index].HeaderText == sortByString)
-                {
-                    sortBy = DGV.Columns[index];
-                    break;
-                }
-            }
-
-            DGV.Sort(sortBy, sortOrder);
+            
         }
     }
 }

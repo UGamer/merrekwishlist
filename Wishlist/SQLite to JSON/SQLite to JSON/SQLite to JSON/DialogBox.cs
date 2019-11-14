@@ -19,7 +19,7 @@ namespace SQLite_to_JSON
         DataTable table;
 
         string type;
-        DataGridViewRow item;
+        DataGridViewSelectedRowCollection items;
         ManageItems refer;
 
         public DialogBox(DataTable tableTable, string type)
@@ -32,10 +32,10 @@ namespace SQLite_to_JSON
                 DropDownBox.Items.Add(row["Title"].ToString());
         }
 
-        public DialogBox(DataTable tableTable, string type, DataGridViewRow item, ManageItems refer)
+        public DialogBox(DataTable tableTable, string type, DataGridViewSelectedRowCollection items, ManageItems refer)
         {
             this.type = type;
-            this.item = item;
+            this.items = items;
             this.refer = refer;
 
             InitializeComponent();
@@ -84,52 +84,65 @@ namespace SQLite_to_JSON
             {
                 con = new SQLiteConnection(connectionString);
 
-                // Delete from first table (use type)
-                int id = Convert.ToInt32(item.Cells["Id"].Value.ToString());
-                SQLiteCommand deleteCmd = new SQLiteCommand("DELETE FROM " + type + " WHERE Id = " + id + ";", con);
-
-                // Add to new table (use DropDownBox.Text)
-                SQLiteCommand insertCmd = new SQLiteCommand("INSERT INTO " + DropDownBox.Text + " (Id, ImageTitle, Title, Want, Price, DeliveryTime, Description, URL) VALUES (@Id, @ImageTitle, @Title, @Want, @Price, @DeliveryTime, @Description, @URL);", con);
-
-                SQLiteCommand selectCmd = new SQLiteCommand("SELECT * FROM " + type, con);
-
-                con.Open();
-
-                DataTable table;
-                selectCmd.CommandType = CommandType.Text;
-                SQLiteDataAdapter da = new SQLiteDataAdapter(selectCmd);
-                table = new DataTable();
-                da.Fill(table);
-
-                con.Close();
-
-                int highestId = 0;
-                foreach (DataRow row in table.Rows)
+                for (int index = 0; index < items.Count; index++)
                 {
-                    int rowId = Convert.ToInt32(row[0].ToString());
-                    if (highestId < rowId)
-                        highestId = rowId + 1;
+                    // Delete from first table (use type)
+                    int id = Convert.ToInt32(items[index].Cells["Id"].Value.ToString());
+                    SQLiteCommand deleteCmd = new SQLiteCommand("DELETE FROM " + type + " WHERE Id = " + id + ";", con);
+
+                    // Add to new table (use DropDownBox.Text)
+                    SQLiteCommand insertCmd = new SQLiteCommand("INSERT INTO " + DropDownBox.Text + " (Id, ImageTitle, Title, Want, Price, DeliveryTime, Description, URL) VALUES (@Id, @ImageTitle, @Title, @Want, @Price, @DeliveryTime, @Description, @URL);", con);
+
+                    SQLiteCommand selectCmd = new SQLiteCommand("SELECT * FROM " + DropDownBox.Text, con);
+
+                    con.Open();
+
+                    DataTable table;
+                    selectCmd.CommandType = CommandType.Text;
+                    SQLiteDataAdapter da = new SQLiteDataAdapter(selectCmd);
+                    table = new DataTable();
+                    da.Fill(table);
+
+                    con.Close();
+
+                    int highestId = 0;
+                    foreach (DataRow row in table.Rows)
+                    {
+                        int rowId = Convert.ToInt32(row[0].ToString());
+                        if (highestId < rowId)
+                            highestId = rowId + 1;
+                    }
+
+                    highestId++;
+
+                    insertCmd.Parameters.AddWithValue("@Id", highestId);
+                    insertCmd.Parameters.AddWithValue("@ImageTitle", items[index].Cells["ImageTitle"].Value.ToString());
+                    insertCmd.Parameters.AddWithValue("@Title", items[index].Cells["Title"].Value.ToString());
+                    insertCmd.Parameters.AddWithValue("@Want", Convert.ToInt32(items[index].Cells["Want"].Value.ToString()));
+                    insertCmd.Parameters.AddWithValue("@Price", Convert.ToDouble(items[index].Cells["Price"].Value.ToString()));
+                    insertCmd.Parameters.AddWithValue("@DeliveryTime", Convert.ToInt32(items[index].Cells["DeliveryTime"].Value.ToString()));
+                    insertCmd.Parameters.AddWithValue("@Description", items[index].Cells["Description"].Value.ToString());
+                    insertCmd.Parameters.AddWithValue("@URL", items[index].Cells["URL"].Value.ToString());
+
+                    con.Open();
+                    insertCmd.ExecuteNonQuery();
+                    deleteCmd.ExecuteNonQuery();
+                    con.Close();
+
+                    insertCmd.Parameters.RemoveAt("@Id");
+                    insertCmd.Parameters.RemoveAt("@ImageTitle");
+                    insertCmd.Parameters.RemoveAt("@Title");
+                    insertCmd.Parameters.RemoveAt("@Want");
+                    insertCmd.Parameters.RemoveAt("@Price");
+                    insertCmd.Parameters.RemoveAt("@DeliveryTime");
+                    insertCmd.Parameters.RemoveAt("@Description");
+                    insertCmd.Parameters.RemoveAt("@URL");
                 }
 
-                highestId++;
-
-                insertCmd.Parameters.AddWithValue("@Id", highestId);
-                insertCmd.Parameters.AddWithValue("@ImageTitle", item.Cells["ImageTitle"].Value.ToString());
-                insertCmd.Parameters.AddWithValue("@Title", item.Cells["Title"].Value.ToString());
-                insertCmd.Parameters.AddWithValue("@Want", Convert.ToInt32(item.Cells["Want"].Value.ToString()));
-                insertCmd.Parameters.AddWithValue("@Price", Convert.ToDouble(item.Cells["Price"].Value.ToString()));
-                insertCmd.Parameters.AddWithValue("@DeliveryTime", Convert.ToInt32(item.Cells["DeliveryTime"].Value.ToString()));
-                insertCmd.Parameters.AddWithValue("@Description", item.Cells["Description"].Value.ToString());
-                insertCmd.Parameters.AddWithValue("@URL", item.Cells["URL"].Value.ToString());
-
-                con.Open();
-                insertCmd.ExecuteNonQuery();
-                deleteCmd.ExecuteNonQuery();
-                con.Close();
-
-                MessageBox.Show("Successfully moved item.", "Success!");
+                MessageBox.Show("Successfully moved item(s).", "Success!");
 
                 refer.FillDGV();
+                this.Close();
             }
         }
     }
