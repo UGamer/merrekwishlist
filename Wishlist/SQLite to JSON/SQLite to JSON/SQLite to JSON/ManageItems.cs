@@ -193,16 +193,45 @@ namespace SQLite_to_JSON
             
             updateCmd.ExecuteNonQuery();
             con.Close();
+        }
 
-            updateCmd.Parameters.RemoveAt("@ImageTitle");
-            updateCmd.Parameters.RemoveAt("@Title");
-            updateCmd.Parameters.RemoveAt("@Want");
-            updateCmd.Parameters.RemoveAt("@Price");
-            updateCmd.Parameters.RemoveAt("@DeliveryTime");
-            updateCmd.Parameters.RemoveAt("@Description");
-            updateCmd.Parameters.RemoveAt("@URL");
+        private void DuplicateEntryButton_Click(object sender, EventArgs e)
+        {
+            SQLiteCommand insertCmd = new SQLiteCommand("INSERT INTO " + tableString + " ([Id], [ImageTitle], [Title], [Want], [Price], [DeliveryTime], [Description], [URL]) VALUES (@Id, @ImageTitle, @Title, @Want, @Price, @DeliveryTime, @Description, @URL);", con);
 
-            
+            int highestId = 0;
+
+            for (int index = 0; index < DGV.Rows.Count; index++)
+                if (highestId < Convert.ToInt32(DGV.Rows[index].Cells["Id"].Value.ToString()))
+                    highestId = Convert.ToInt32(DGV.Rows[index].Cells["Id"].Value.ToString());
+
+            if (highestId == 0)
+                highestId--;
+
+            highestId++;
+
+            string imageTitle = DGV.Rows[rowIndex].Cells["ImageTitle"].Value.ToString();
+            string title = DGV.Rows[rowIndex].Cells["Title"].Value.ToString();
+            int want = Convert.ToInt32(DGV.Rows[rowIndex].Cells["Want"].Value.ToString());
+            double price = Convert.ToDouble(DGV.Rows[rowIndex].Cells["Price"].Value.ToString());
+            string deliveryTime = DGV.Rows[rowIndex].Cells["DeliveryTime"].Value.ToString();
+            string description = DGV.Rows[rowIndex].Cells["Description"].Value.ToString();
+            string url = DGV.Rows[rowIndex].Cells["URL"].Value.ToString();
+
+            insertCmd.Parameters.AddWithValue("@Id", highestId);
+            insertCmd.Parameters.AddWithValue("@ImageTitle", imageTitle);
+            insertCmd.Parameters.AddWithValue("@Title", title);
+            insertCmd.Parameters.AddWithValue("@Want", want);
+            insertCmd.Parameters.AddWithValue("@Price", price);
+            insertCmd.Parameters.AddWithValue("@DeliveryTime", deliveryTime);
+            insertCmd.Parameters.AddWithValue("@Description", description);
+            insertCmd.Parameters.AddWithValue("@URL", url);
+
+            con.Open();
+            insertCmd.ExecuteNonQuery();
+            con.Close();
+
+            FillDGV();
         }
     }
 }
