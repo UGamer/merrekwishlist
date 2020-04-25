@@ -23,6 +23,8 @@ function load() {
 	
 	code += "</table>";
 	document.getElementById("data").innerHTML = code;
+	
+	sortTable(2);
 }
 
 function sortTable(n) {
