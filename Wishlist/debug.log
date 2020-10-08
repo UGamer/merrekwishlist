@@ -19,3 +19,37 @@
 [0425/042214.972:WARNING:spdy_session.cc(3274)] Received WINDOW_UPDATE for invalid stream 9
 [0425/042214.982:WARNING:spdy_session.cc(3326)] Received HEADERS for invalid stream 9
 [0425/042415.330:ERROR:browser_process_sub_thread.cc(221)] Waited 11 ms for network service
+[0818/224647.151:INFO:CONSOLE(1)] "Synchronous XMLHttpRequest on the main thread is deprecated because of its detrimental effects to the end user's experience. For more help, check https://xhr.spec.whatwg.org/.", source: https://staticx.ibncollege.com/wcsstore/ConsumerDirectStorefrontAssetStore/javascript/jquery-latest.js (1)
+[0818/224648.571:WARNING:angle_platform_impl.cc(52)] compileToBinary(259): 
+C:\fakepath(75,10-54): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(97,10-54): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+
+[0818/224649.700:INFO:CONSOLE(1)] "300000125554", source: https://staticx.ibncollege.com/wcsstore/ConsumerDirectStorefrontAssetStore/javascript_new_ui/gmbrowse.js (1)
+[0818/224651.091:WARNING:spdy_session.cc(3326)] Received HEADERS for invalid stream 5
+[0818/230600.944:ERROR:browser_process_sub_thread.cc(221)] Waited 93 ms for network service
+[0906/030646.614:INFO:CONSOLE(21202)] "The Performance Observer MUST have a valid entryType in its type attribute.", source: https://www.amazon.com/SW-2000-Nintendo-Switch/dp/B08G3MN6KP (21202)
+[0906/030646.634:INFO:CONSOLE(21202)] "The Performance Observer MUST have a valid entryType in its type attribute.", source: https://www.amazon.com/SW-2000-Nintendo-Switch/dp/B08G3MN6KP (21202)
+[0906/030646.665:INFO:CONSOLE(21202)] "The Performance Observer MUST have a valid entryType in its type attribute.", source: https://www.amazon.com/SW-2000-Nintendo-Switch/dp/B08G3MN6KP (21202)
+[0906/030647.313:INFO:CONSOLE(35)] "Generating new titleSessionId <%d>", source: https://images-na.ssl-images-amazon.com/images/I/01VMbgmrugL._RC%7C01x4giTy+uL.js,41I5+4VSayL.js,01r9LpT6pbL.js,3181lUlzBfL.js,11yAqqXzKZL.js,81IDmFVhNZL.js,01rfUB9VH5L.js_.js?AUIClients/Brila (35)
+[0906/030647.365:INFO:CONSOLE(35)] "Generating new titleSessionId <%d>", source: https://images-na.ssl-images-amazon.com/images/I/01VMbgmrugL._RC%7C01x4giTy+uL.js,41I5+4VSayL.js,01r9LpT6pbL.js,3181lUlzBfL.js,11yAqqXzKZL.js,81IDmFVhNZL.js,01rfUB9VH5L.js_.js?AUIClients/Brila (35)
+[0906/030647.559:INFO:CONSOLE(145)] "VIDEOJS:", source: https://images-na.ssl-images-amazon.com/images/I/01VMbgmrugL._RC%7C01x4giTy+uL.js,41I5+4VSayL.js,01r9LpT6pbL.js,3181lUlzBfL.js,11yAqqXzKZL.js,81IDmFVhNZL.js,01rfUB9VH5L.js_.js?AUIClients/Brila (145)
+[0906/030647.571:INFO:CONSOLE(145)] "VIDEOJS:", source: https://images-na.ssl-images-amazon.com/images/I/01VMbgmrugL._RC%7C01x4giTy+uL.js,41I5+4VSayL.js,01r9LpT6pbL.js,3181lUlzBfL.js,11yAqqXzKZL.js,81IDmFVhNZL.js,01rfUB9VH5L.js_.js?AUIClients/Brila (145)
+[0906/030647.878:INFO:CONSOLE(21202)] "The Performance Observer MUST have a valid entryType in its type attribute.", source: https://www.amazon.com/SW-2000-Nintendo-Switch/dp/B08G3MN6KP (21202)
+[0906/030649.200:INFO:CONSOLE(21202)] "The Performance Observer MUST have a valid entryType in its type attribute.", source: https://www.amazon.com/SW-2000-Nintendo-Switch/dp/B08G3MN6KP (21202)
+[0906/030649.202:INFO:CONSOLE(35)] "Generating new next titleSessionId <%d>", source: https://images-na.ssl-images-amazon.com/images/I/01VMbgmrugL._RC%7C01x4giTy+uL.js,41I5+4VSayL.js,01r9LpT6pbL.js,3181lUlzBfL.js,11yAqqXzKZL.js,81IDmFVhNZL.js,01rfUB9VH5L.js_.js?AUIClients/Brila (35)
+[0906/030649.252:WARNING:spdy_session.cc(3326)] Received HEADERS for invalid stream 1
+[0906/030649.256:WARNING:spdy_session.cc(3326)] Received HEADERS for invalid stream 23
+[0906/030649.256:WARNING:spdy_session.cc(3326)] Received HEADERS for invalid stream 25
+[0906/030649.256:WARNING:spdy_session.cc(3326)] Received HEADERS for invalid stream 27
+[0906/030712.743:ERROR:browser_process_sub_thread.cc(221)] Waited 44 ms for network service
+[0906/030856.973:INFO:CONSOLE(1)] "[Amplitude] WARNING: Property key "user_id" with invalid value type null, ignoring", source: https://cdn.amplitude.com/libs/amplitude-4.5.2-min.gz.js (1)
+[0906/030856.973:INFO:CONSOLE(1)] "[Amplitude] WARNING: Property key "campaign_page_version" with invalid value type null, ignoring", source: https://cdn.amplitude.com/libs/amplitude-4.5.2-min.gz.js (1)
+[0906/030933.099:INFO:CONSOLE(1)] "[Amplitude] WARNING: Property key "user_id" with invalid value type null, ignoring", source: https://cdn.amplitude.com/libs/amplitude-4.5.2-min.gz.js (1)
+[0906/030933.099:INFO:CONSOLE(1)] "[Amplitude] WARNING: Property key "campaign_page_version" with invalid value type null, ignoring", source: https://cdn.amplitude.com/libs/amplitude-4.5.2-min.gz.js (1)
+[0906/031008.472:INFO:CONSOLE(1)] "[Amplitude] WARNING: Property key "user_id" with invalid value type null, ignoring", source: https://cdn.amplitude.com/libs/amplitude-4.5.2-min.gz.js (1)
+[0906/031008.472:INFO:CONSOLE(1)] "[Amplitude] WARNING: Property key "campaign_page_version" with invalid value type null, ignoring", source: https://cdn.amplitude.com/libs/amplitude-4.5.2-min.gz.js (1)
+[0906/031104.051:ERROR:browser_process_sub_thread.cc(221)] Waited 20 ms for network service
+[0909/075143.926:INFO:CONSOLE(39)] "jQuery.Deferred exception: Cannot read property 'classList' of undefined", source: https://www.gamestop.com/on/demandware.static/Sites-gamestop-us-Site/-/default/v1599639304909/js/main.js (39)
+[0909/075144.342:INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read property 'indexOf' of undefined", source: https://www.gamestop.com/on/demandware.static/Sites-gamestop-us-Site/-/default/v1599639304909/js/certona.js (1)
+[0909/075144.398:INFO:CONSOLE(79)] "Uncaught TypeError: Cannot read property 'classList' of undefined", source: https://cdn.appdynamics.com/adrum/adrum-latest.js (79)
+[0909/075145.616:INFO:CONSOLE(0)] "ResizeObserver loop limit exceeded", source: https://www.gamestop.com/video-games/switch/games/products/hyrule-warriors-age-of-calamity/11108542.html?utm_source=rakutenls&utm_medium=affiliate&utm_content=IGN&utm_campaign=10&utm_kxconfid=tebx5rmj3&cid=afl_10000087&affID=77777&sourceID=oelFIBIMgTk-FgHtXRwk.qKud3iH0eBLmA (0)

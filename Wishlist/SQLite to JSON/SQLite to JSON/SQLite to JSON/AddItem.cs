@@ -57,7 +57,8 @@ namespace SQLite_to_JSON
             if (type == "Add")
             {
                 SQLiteCommand selectCmd = new SQLiteCommand("SELECT * FROM " + destTable, con);
-                SQLiteCommand insertCmd = new SQLiteCommand("INSERT INTO " + destTable + " ([Id], [ImageTitle], [Title], [Want], [Price], [DeliveryTime], [Description], [URL]) VALUES (@Id, @ImageTitle, @Title, @Want, @Price, @DeliveryTime, @Description, @URL);", con);
+                // SQLiteCommand insertCmd = new SQLiteCommand("INSERT INTO " + destTable + " ([Id], [ImageTitle], [Title], [Want], [Price], [DeliveryTime], [Description], [URL]) VALUES (@Id, @ImageTitle, @Title, @Want, @Price, @DeliveryTime, @Description, @URL);", con);
+                SQLiteCommand insertCmd = new SQLiteCommand("INSERT INTO " + destTable + " ([ImageTitle], [Title], [Want], [Price], [DeliveryTime], [Description], [URL]) VALUES (@ImageTitle, @Title, @Want, @Price, @DeliveryTime, @Description, @URL);", con);
 
                 con.Open();
 
@@ -65,6 +66,7 @@ namespace SQLite_to_JSON
                 DataTable table = new DataTable();
                 da.Fill(table);
 
+                /*
                 int highestId = 0;
 
                 for (int index = 0; index < table.Rows.Count; index++)
@@ -75,8 +77,9 @@ namespace SQLite_to_JSON
                     highestId--;
 
                 highestId++;
+                */
 
-                insertCmd.Parameters.AddWithValue("@Id", highestId);
+                // insertCmd.Parameters.AddWithValue("@Id", highestId);
                 insertCmd.Parameters.AddWithValue("@ImageTitle", ImageTitleBox.Text);
                 insertCmd.Parameters.AddWithValue("@Title", TitleBox.Text);
                 insertCmd.Parameters.AddWithValue("@Want", WantBar.Value);
@@ -90,7 +93,7 @@ namespace SQLite_to_JSON
                 MessageBox.Show("\"" + TitleBox.Text + "\" successfully added to collection.", "Successful Addition", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 con.Close();
 
-                insertCmd.Parameters.RemoveAt("@Id");
+                // insertCmd.Parameters.RemoveAt("@Id");
                 insertCmd.Parameters.RemoveAt("@ImageTitle");
                 insertCmd.Parameters.RemoveAt("@Title");
                 insertCmd.Parameters.RemoveAt("@Want");
